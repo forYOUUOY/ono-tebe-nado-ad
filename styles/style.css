@@ -3,25 +3,16 @@
 html {
   scroll-behavior: smooth;
 }
-.lots {
-  margin-bottom: 120px;
-}
-
-.about {
-  margin-bottom: 180px;
-}
-
-.header {
-  background-color: white;
-}
 
 .cover {
   background-image: url("../images/cover.jpg");
   background-size: cover;     
   background-position: center; 
+  background-repeat: no-repeat; 
 }
 
-header {
+.header {
+  background-color: white;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
@@ -30,14 +21,25 @@ header {
 
 .header__menu {
   margin-left: 50px;
+  margin-bottom: 6px;
 }
 
 .menu__nav {
   display: flex;
-  gap: 25px;
+  gap: 31px;
   flex-direction: row;
   list-style: none;
   font-size: 18px;
+}
+
+.header__logo {
+  display: block; 
+  justify-self: center; 
+}
+
+.header__logo img {
+    width: 148px; 
+    height: 105px;
 }
 
 .header__menu-link {
@@ -48,24 +50,16 @@ header {
 .header__menu-item_active {
   list-style: circle;
   text-decoration: underline;
-}
-
-.header__logo {
-    display: block; 
-    justify-self: center; 
-}
-
-.header__logo img {
-    width: 148px; 
-    height: 105px;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
 }
 
 .address {
-  max-width: 240px;
+  width: 240px;
   justify-self: end;
   font-style: normal;
   text-align: left;
-  margin-right: 60px;
+  margin-right: 50px;
   font-family: inherit; 
   font-size: 18px;
   line-height: 1.2;
@@ -73,7 +67,7 @@ header {
 
 .header__address-link {
   display: block;
-  align-items: flex-start;
+  line-height: 1.1;
   text-underline-offset: 4px; 
   text-decoration-thickness: 1px; 
 }
@@ -81,11 +75,11 @@ header {
 .block__address {
   display: flex;
   flex-direction: column;
-  gap: 2px; 
+  gap: 3px; 
 }
 
 .block__address p {
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 .cover {
@@ -94,7 +88,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 180px;
 }
 
 .overlay {
@@ -107,6 +100,12 @@ header {
   z-index: 1;
 }
 
+.cover__title,
+.description {
+  position: relative;
+  z-index: 2;
+}
+
 .cover__title {
   text-transform: uppercase;
   color: #fff;
@@ -116,9 +115,7 @@ header {
   font-weight: 700;
   display: flex;
   flex-direction: column;
-  margin: 155px 0 0 40px;
-  position: relative;
-  z-index: 2;
+  margin: 155px 0 0 30px;
 }
 
 .cover__title-line {
@@ -143,15 +140,13 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
-  position: relative;
-  z-index: 2;
 }
 
 .cover__description {
   font-size: 22px;
   font-weight: 400;
   line-height: 28px;
-  word-spacing: 10px;
+  word-spacing: 18.5px;
   text-transform: uppercase;
   margin: 0 0 0 50px;
   color: white;
@@ -164,7 +159,7 @@ header {
   line-height: 100%;
   letter-spacing: 0;
   margin: 0 50px 0 0;
-  padding: 11px 31px 12px 31px;
+  padding: 13px 31px 14px 32px;
   background-color: transparent;
   border: white 1px solid;
   color: #fff;
@@ -172,12 +167,13 @@ header {
 }
 
 .lots {
-  padding: 0 24px;
+  padding: 184px 24px 0;
+  margin-bottom: 119px;
 }
 
 .lots__title {
   margin-left: 40px;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   font-size: 40px;
   line-height: 100%;
   font-weight: 700;
@@ -188,13 +184,16 @@ header {
   list-style: none;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 25px;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 }
 
 .lots__menu-items {
   max-width: 334px;
   min-height: 596px;
+  background-size: cover;
+  background-position: center;
 }
 
 .lots__menu-link {
@@ -202,6 +201,7 @@ header {
   width: 100%;
   height: 100%;
   text-decoration: none;
+  color: inherit;
 }
 
 .lots__article {
@@ -209,50 +209,55 @@ header {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-between;
   padding: 48px 40px;
+}
+
+.lots__article-title,
+.lots__article-text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
 }
 
 .lots__article-title {
   font-size: 22px;
-  line-height: 120%;
+  line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: underline;
+  text-underline-offset: 3px;
   text-decoration-thickness: 1px; 
   color: rgba(255, 255, 255, 0.85); 
-  position: relative;
-  z-index: 2;
 }
 
 .lots__article-text {
-  margin-top: 10px;
-  font-family: inherit;
+    font-family: inherit;
   font-size: 20px;
   line-height: 120%;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.85); 
-  position: relative;
-  z-index: 2;
-
 }
 
 .lots__article-bg1 {
   background-image: url("../images/card-lot-01.jpg");
   background-size: cover;     
   background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 .lots__article-bg2 {
   background-image: url("../images/card-lot-02.jpg");
   background-size: cover;     
   background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 .lots__article-bg3 {
   background-image: url("../images/card-lot-03.jpg");
   background-size: cover;     
   background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 .lots__link {
@@ -269,6 +274,7 @@ header {
   grid-template-columns: 334px 1fr;
   align-items: start;
   padding: 0 24px;
+  margin-bottom: 181px;
 }
 
 .about__logo-circle {
@@ -306,10 +312,10 @@ header {
   margin-top: 3px;
 }
 
-.about__block_only-text {
+.about_block_only-text {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 24px;
 }
 
 .about__text {
@@ -322,9 +328,9 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: start;
-  padding: 0 50px;
-  min-height: 180px;
-
+  padding: 0 50px 0 51px;
+  min-height: 189px;
+  border-bottom: 10px solid #000;
 }
 
 .footer__address {
@@ -334,7 +340,7 @@ header {
   flex-direction: column;
 }
 
-.footer__addres-link {
+.footer__address a {
   font-size: 18px;
   line-height: 24.3px;
   font-weight: 400;
@@ -344,11 +350,15 @@ header {
   text-decoration-thickness: 1px; 
 }
 
-.footer__addres-text {
+.footer__address p {
   font-size: 18px;
   line-height: 24.3px;
   font-weight: 400;
   color: inherit;
+}
+
+.footer__nav {
+  justify-self: center;
 }
 
 .footer__menu {
@@ -366,6 +376,8 @@ header {
 
 .footer__menu-item_active {
   text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
 }
 
 .footer__social-list {
@@ -374,6 +386,7 @@ header {
   display: flex;
   flex-direction: row;
   gap: 48px;
+  align-self: start;
 }
 
 .footer__social-link {
