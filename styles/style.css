@@ -52,9 +52,15 @@ a {
 .header__links-list-item .header__menu-link {
   display: inline-block;
   padding: 0 4.5px 1px 0;
+}
+.header__links-list-item_underline {
   background: linear-gradient(currentColor, currentColor) no-repeat 0 100% / 100% 1px;
 }
 
+.header__links-list-item_no-bullit {
+  list-style: none;
+  text-decoration: none;
+}
 .address {
   width: 240px;
   justify-self: end;
@@ -103,7 +109,7 @@ a {
 }
 
 .cover__title,
-.cover__description  {
+.cover__description {
   position: relative;
   z-index: 2;
 }
