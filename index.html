@@ -10,23 +10,23 @@
   <body>
     <header class="header">
       <nav class="header__menu">
-        <ul class="menu__nav">
-          <li class="header__menu-item header__menu-item_nonactive">
+        <ul class="header__links-list">
+          <li class="header__links-list-item header__links-list-item_no-bullit">
             <a href="#0" class="header__menu-link">главная</a>
           </li>
-          <li class="header__menu-item header__menu-item_active">
+          <li class="header__links-list-item header__links-list-item">
             <a href="#0" class="header__menu-link">посмотреть лоты</a>
           </li>
-          <li class="header__menu-item header__menu-item_active">
+          <li class="header__links-list-item header__links-list-item">
             <a href="#0" class="header__menu-link">об аукционе</a>
           </li>
         </ul>
       </nav>
       <a href="#0" class="header__logo">
-        <img src="images/logo-black.svg" alt="Логотип проекта" />
+        <img class="header__logo-image" src="images/logo-black.svg" alt="Логотип проекта" />
       </a>
       <address class="address">
-        <div class="block__address">
+        <div class="header__address">
           <a class="header__address-link" href="tel:+99995555555">
             +9 999 555 5555
           </a>
@@ -45,30 +45,30 @@
       <section class="cover">
         <div class="overlay"></div>
         <h1 class="cover__title">
-          <span class="cover__title-line cover__title-line_first"> Оно </span>
-          <span class="cover__title-line cover__title-line_second"> Тебе </span>
-          <span class="cover__title-line cover__title-line_third"> Надо </span>
+          <span class="cover__title-line cover__title-text_left"> Оно </span>
+          <span class="cover__title-line cover__title-text_center"> Тебе </span>
+          <span class="cover__title-line cover__title-text_right"> Надо </span>
         </h1>
 
-        <div class="description">
-          <p class="cover__description">
+        <div class="cover__description">
+          <p class="cover__description-text">
             Аукцион вещей, в которые никто не верил
           </p>
-          <button class="cover__button">Сделать ставку</button>
+          <button class="bet-button">Сделать ставку</button>
         </div>
       </section>
 
       <section class="lots">
-        <h2 class="lots__title">Лоты</h2>
-        <ul class="lots__cards">
-          <li class="lots__menu-items">
-            <a href="#0" class="lots__menu-link">
-              <article class="lots__article lots__article-bg1">
+        <h2 class="lots__heading">Лоты</h2>
+        <ul class="lots__card-list">
+          <li class="lots__card-list-item">
+            <a href="#0" class="card-link">
+              <article class="card card_type_film">
                 <div class="overlay"></div>
-                <h3 class="lots__article-title">
+                <h3 class="card__title">
                   ФИЛЬМ РЕЖИССЁРА, КОТОРЫЙ БРОСИЛ КИНОШКОЛУ
                 </h3>
-                <p class="lots__article-text">
+                <p class="card__text">
                   Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
                   ставка, если бы вы не знали, что режиссёр — Пол Томас
                   Андерсон?
@@ -77,14 +77,14 @@
             </a>
           </li>
 
-          <li class="lots__menu-items">
-            <a href="#0" class="lots__menu-link">
-              <article class="lots__article lots__article-bg2">
+          <li class="lots__card-list-item">
+            <a href="#0" class="card-link">
+              <article class="card card_type_book">
                 <div class="overlay"></div>
-                <h3 class="lots__article-title">
+                <h3 class="card__title">
                   КНИГА, ГДЕ ОПИСАН ОДИН СКУЧНЫЙ ДЕНЬ ИЗ ЖИЗНИ РЕКЛАМНОГО АГЕНТА
                 </h3>
-                <p class="lots__article-text">
+                <p class="card__text">
                   Объёмом почти в тысячу страниц. Иногда без знаков препинания и
                   с переходами на древнеанглийский. В ней одновременно
                   рассказывается о 16 июня 1904 года и об истории литературы,
@@ -96,14 +96,14 @@
             </a>
           </li>
 
-          <li class="lots__menu-items">
-            <a href="#0" class="lots__menu-link">
-              <article class="lots__article lots__article-bg3">
+          <li class="lots__card-list-item">
+            <a href="#0" class="card-link">
+              <article class="card card_type_picture">
                 <div class="overlay"></div>
-                <h3 class="lots__article-title">
+                <h3 class="card__title">
                   КАРТИНА, КОТОРУЮ ПОВТОРИТ ДАЖЕ 5-ЛЕТНИЙ СЫН МАМИНОЙ ПОДРУГИ
                 </h3>
-                <p class="lots__article-text">
+                <p class="card__text">
                   Ну действительно, там линии, тут кружочек, а здесь и вовсе
                   что-то похожее на инфузорию-туфельку. Никаких полей, лесов,
                   котиков. Сколько бы вы на такое поставили, если бы не знали,
@@ -113,11 +113,11 @@
             </a>
           </li>
         </ul>
-        <a class="lots__link" href="#0">посмотреть больше</a>
+        <a class="lots__look-more-link" href="#0">посмотреть больше</a>
       </section>
 
       <section class="about">
-        <div class="about__block_image">
+        <div class="about__block-image">
           <div class="about__logo-circle">
             <img
               src="images/logo-white.svg"
@@ -128,7 +128,7 @@
         </div>
         <div class="about__content">
           <h2 class="about__title">Об аукционе</h2>
-          <div class="about__block_only-text">
+          <div>
             <p class="about__text">
               Здесь вы не встретите очередное пафосное собрание невероятно
               дорогого антиквариата. Наши лоты вообще не должны были попасть
@@ -160,15 +160,15 @@
           Амстердам
         </p>
       </address>
-      <nav class="footer__nav">
-        <ul class="footer__menu">
-          <li class="footer__menu-item footer__menu-item_nonactive">
+      <nav class="footer__menu">
+        <ul class="footer__menu-list">
+          <li class="footer__menu-list-item footer__menu-item_nonactive">
             <a href="#0" class="footer__menu-link">главная</a>
           </li>
-          <li class="footer__menu-item footer__menu-item_active">
+          <li class="footer__menu-list-item footer__menu-item_active">
             <a href="#0" class="footer__menu-link">посмотреть лоты</a>
           </li>
-          <li class="footer__menu-item footer__menu-item_active">
+          <li class="footer__menu-list-item footer__menu-item_active">
             <a href="#0" class="footer__menu-link">об аукционе</a>
           </li>
         </ul>
